@@ -6,6 +6,6 @@ class App < Sinatra::Base
   end
 
   post '/piglatinize' do
-    @user_phrase = params[:user_phrase]
+    PigLatinize.convert(params[:user_phrase])
   end
 end
